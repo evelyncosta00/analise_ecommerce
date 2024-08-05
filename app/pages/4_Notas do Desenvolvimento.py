@@ -14,14 +14,13 @@ st.markdown(''' # Notas do Desenvolvimento 	:pencil:''')
 st.divider()
 st.markdown('''
 Nesta página, você encontrará uma descrição completa de todo o processo de desenvolvimento do projeto. 
-Desde a importação e análise dos dados até a aplicação de modelos e a geração de insights, cada etapa é 
-explicada para que todos possam entender as técnicas e métodos utilizados. ''')
+Desde a importação e análise dos dados até a aplicação de modelos e a geração de insights. ''')
 
 st.markdown('''
-Primeiramente, importei as duas tabelas no Python para analisar as bases de dados. 
-Identifiquei as semelhanças e diferenças entre elas e segui a ordem indicada nas instruções do case para análise.
-Sendo assim, comecei explorando a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
-''')
+Primeiramente, importei as duas tabelas disponibilizadas no Python para analisar as bases de dados. 
+Identifiquei as semelhanças e diferenças entre elas e optei por desenvolver a análise seguindo a ordem indicada nas instruções do case.
+Sendo assim, para concluir a etapa **1. Manipulação e Visualização de dados**, comecei explorando a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
+''''')
 
 
 url = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/Vendas_Evino.csv"
