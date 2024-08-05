@@ -3,6 +3,12 @@ import pandas as pd
 import plotly.express as px
 from utilidades import leitura_de_dados
 
+st.markdown('''
+## Vendas :jigsaw:            
+''')
+
+st.divider()
+
 # Definição das colunas de análise e valor
 COLUNAS_ANALISE = {
     'Tipo do Vinho': 'tipo_do_vinho', 
