@@ -90,9 +90,9 @@ if len(indices_selecionados) > 0:
     # Criar uma cópia formatada para exibição na tabela
     vendas_pivotadas_formatada = vendas_pivotadas.applymap(lambda x: f"{x:.2f}%" if pd.notnull(x) else "")
 
-col1.markdown(''' 
-#### Selecione os campos para visualizar a tabela dinâmica             
-''')
+    col1.markdown(''' 
+    #### Selecione os campos para visualizar a tabela dinâmica             
+    ''')
     st.dataframe(vendas_pivotadas_formatada)
 
     # Criar gráfico de barras
