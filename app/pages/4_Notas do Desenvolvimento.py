@@ -57,7 +57,7 @@ Depois, importei essa query para um DataFrame no Python e gerei um arquivo Excel
 Com essas tabelas dinâmicas, percebi que teria todos os principais insights de forma clara e simples. Decidi então construir
 um código para gerar tabelas dinâmicas no Python e apresentá-las com a biblioteca de visualização Streamlit. Com as tabelas
 dinâmicas geradas em Python e os gráficos da biblioteca Plotly, consegui visualizar com ainda mais facilidade os principais insights,
-que estão descritos na página de visão geral. Essas tabelas e gráficos podem ser consultados na aba **Visualização Dinâmica Vendas**.
+que estão descritos na página de **Visão Geral**. Essas tabelas e gráficos podem ser consultados na página de **Visualização Dinâmica Vendas**.
 ''')
 
 st.divider()
@@ -97,8 +97,8 @@ st.table(df3)
 
 st.markdown('''
 Com esse cubo, pude visualizar novamente, através das tabelas dinâmicas do Excel, os comportamentos que caracterizam os perfis 
-de compra de cada cluster definido pelo algoritmo. Esses perfis foram descritos na aba “Visão Geral” e as tabelas dinâmicas que 
-me ajudaram a identificar cada perfil podem ser consultadas na aba **Visualização Dinâmica Clusters**.
+de compra de cada cluster definido pelo algoritmo. Esses perfis foram descritos na página **Visão Geral** e as tabelas dinâmicas que 
+me ajudaram a identificar cada perfil podem ser consultadas na página **Visualização Dinâmica Clusters**.
 ''')
 
 
