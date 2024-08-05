@@ -91,6 +91,22 @@ soma_receita e count_qtd_clientes.
 url3 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/cubo_clientes_clusterizados.csv"
 df3 = pd.read_csv(url3, sep=';', encoding='latin1')
 
+df2 = df2.head()
 st.table(df3)
 
+
+st.markdown('''
+Com esse cubo, pude visualizar novamente, através das tabelas dinâmicas do Excel, os comportamentos que caracterizam os perfis 
+de compra de cada cluster definido pelo algoritmo. Esses perfis foram descritos na aba “Visão Geral” e as tabelas dinâmicas que 
+me ajudaram a identificar cada perfil podem ser consultadas na aba **Visualização Dinâmica Clusters**”.
+''')
+
+
+st.divider()
+
+
+st.markdown('''
+Com este case, pude demonstrar algumas das minhas habilidades técnicas e analíticas. Espero ter mais desafios para criar cada vez mais 
+soluções inteligentes. :bar_chart:
+''')
 
