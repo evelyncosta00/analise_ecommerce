@@ -62,12 +62,15 @@ dinâmicas geradas em Python e os gráficos da biblioteca Plotly, consegui visua
 que estão descritos na página de **Visão Geral**. Essas tabelas e gráficos podem ser consultados na página de **Visualização Dinâmica Vendas**.
 ''')
 
-st.divider()
 
 
 st.markdown('''
 Plotei todos os grandes números, analisei as combinações que faziam sentido e, após isso, decidi partir para a segunda etapa do case:
 #### Desenvolvimento de Modelos Estatísticos de CRM, especificamente a clusterização.
+
+
+st.divider()
+
 
 Trouxe a base Vendas_Clientes_Evino.xlsx para o Python, examinei as colunas e o comportamento dos dados, verifiquei valores nulos e
 outros aspectos da análise exploratória. Realizei o tratamento dos nomes das colunas e criei variáveis dummies para as colunas 
