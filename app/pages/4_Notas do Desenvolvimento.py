@@ -20,7 +20,7 @@ explicada para que todos possam entender as técnicas e métodos utilizados. '''
 st.markdown('''
 Primeiramente, importei as duas tabelas no Python para analisar as bases de dados. 
 Identifiquei as semelhanças e diferenças entre elas e segui a ordem indicada nas instruções do case para análise.
-Decidi explorar primeiro a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
+Sendo assim, comecei explorando a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
 ''')
 
 
