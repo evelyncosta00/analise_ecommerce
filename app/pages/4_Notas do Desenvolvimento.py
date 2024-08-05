@@ -20,8 +20,13 @@ Identifiquei as semelhanças e diferenças entre elas e segui a ordem indicada n
 Decidi explorar primeiro a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
 ''')
 
+# Carregar o CSV em um DataFrame
 url = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/Vendas_Evino.csv"
-df = pd.read_csv(url,sep =";",encoding='latin1')
-df = df.head()
+df = pd.read_csv(url, sep=';', encoding='latin1')
 
+# Remover colunas 'Unnamed'
+df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
+
+# Exibir as primeiras linhas do DataFrame
+df = df.head()
 st.table(df)
