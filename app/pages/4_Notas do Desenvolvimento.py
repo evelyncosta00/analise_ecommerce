@@ -56,7 +56,7 @@ Depois, importei essa query para um DataFrame no Python e gerei um arquivo Excel
 Com essas tabelas dinâmicas, percebi que teria todos os principais insights de forma clara e simples. Decidi então construir
 um código para gerar tabelas dinâmicas no Python e apresentá-las com a biblioteca de visualização Streamlit. Com as tabelas
 dinâmicas geradas em Python e os gráficos da biblioteca Plotly, consegui visualizar com ainda mais facilidade os principais insights,
-que estão descritos na página de visão geral. Essas tabelas e gráficos podem ser consultados na aba “Visualização Dinâmica Vendas”.
+que estão descritos na página de visão geral. Essas tabelas e gráficos podem ser consultados na aba **Visualização Dinâmica Vendas**.
 ''')
 
 st.divider()
