@@ -89,9 +89,7 @@ if len(indices_selecionados) > 0:
 
     # Criar uma cópia formatada para exibição na tabela
     vendas_pivotadas_formatada = vendas_pivotadas.applymap(lambda x: f"{x:.2f}%" if pd.notnull(x) else "")
-st.markdown(''' 
-#### Selecione os campos para visualizar a tabela dinâmica             
-''')
+
     st.dataframe(vendas_pivotadas_formatada)
 
     # Criar gráfico de barras
@@ -131,7 +129,9 @@ st.markdown('''
     )
     st.plotly_chart(fig)
     
-
+st.markdown(''' 
+#### Selecione os campos para visualizar a tabela dinâmica             
+''')
 
 st.divider()
 
