@@ -19,7 +19,7 @@ Desde a importação e análise dos dados até a aplicação de modelos e a gera
 st.markdown('''
 Primeiramente, importei as duas tabelas disponibilizadas no Python para analisar as bases de dados. 
 Identifiquei as semelhanças e diferenças entre elas e optei por desenvolver a análise seguindo a ordem indicada nas instruções do case.
-Sendo assim, para concluir a etapa **1. Manipulação e Visualização de dados**, comecei explorando a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
+Sendo assim, para concluir a etapa **Manipulação e Visualização de dados**, comecei explorando a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
 ''''')
 
 
@@ -34,9 +34,9 @@ df = df.head()
 st.table(df)
 
 st.markdown('''
-Analisando as informações contidas na base, decidi que seria melhor gerar um cubo com alguns agrupamentos, 
-como Região do Brasil para a coluna UF e faixa de idade para a coluna idade, facilitando a visualização e geração de insights. 
-Para gerar o cubo, decidi usar SQL para demonstrar minhas habilidades em queries e na integração do Python com bancos de dados, 
+Analisando as informações contidas na base, concli que seria melhor gerar um cubo com alguns agrupamentos, 
+como **Região do Brasil** para a coluna **UF** e **Faixa de idade** para a coluna **Idade**, facilitando a visualização e geração de insights. 
+Para gerar o cubo, decidi utilizar SQL para demonstrar minhas habilidades em queries e na integração do Python com bancos de dados, 
 algo crucial no ambiente corporativo onde frequentemente lidamos com dados provenientes de bancos de dados SQL.
 
 Criei uma variável engine para armazenar as informações de conexão e usei a função to_sql para escrever o DataFrame. 
@@ -71,9 +71,8 @@ Plotei todos os grandes números, analisei as combinações que faziam sentido e
 
 Trouxe a base Vendas_Clientes_Evino.xlsx para o Python, examinei as colunas e o comportamento dos dados, verifiquei valores nulos e
 outros aspectos da análise exploratória. Realizei o tratamento dos nomes das colunas e criei variáveis dummies para as colunas 
-range_de_preco e tipo_de_vinho, transformando esses dados em categóricos para poder rodar o modelo K-means da biblioteca Scikit-learn, 
-que é um algoritmo de clustering não supervisionado que organiza dados em 
-K clusters, onde K é um número definido pelo usuário.
+range_de_preco e tipo_de_vinho, transformando esses dados em categóricos para rodar o modelo K-means da biblioteca Scikit-learn, 
+que é um algoritmo de clustering não supervisionado que organiza dados em K clusters, onde K é um número definido pelo usuário.
 ''')
 
 st.markdown('''
@@ -84,7 +83,7 @@ st.markdown('''
 - **n_init** = 10: Número de vezes que o K-means será executado com diferentes centroides iniciais.
 - **random_state** = 42: Define a semente do gerador de números aleatórios para garantir a reprodutibilidade dos resultados.
 
-Com essas configurações, o K-means encontrou 10 grupos numerados de 0 a 9. Atribuí os clusters gerados ao DataFrame principal e 
+Com essas configurações, o K-means retornou 10 grupos numerados de 0 a 9. Escorei os clusters gerados ao DataFrame principal e 
 decidi novamente gerar alguns agrupamentos no SQL. Importei o arquivo e criei uma query para novas colunas de soma_garrafas,
 soma_receita e count_qtd_clientes.
 ''')
