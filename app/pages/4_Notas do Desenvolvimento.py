@@ -39,7 +39,8 @@ algo crucial no ambiente corporativo onde frequentemente lidamos com dados prove
 
 Criei uma variável engine para armazenar as informações de conexão e usei a função to_sql para escrever o DataFrame. 
 Em uma query SQL, criei as colunas de agrupamento por faixa etária (baseada na coluna idade) e por Região do Brasil 
-(baseada na coluna UF). Também criei as colunas soma_receita, soma_pedidos e soma_clientes, agrupando pelas cinco primeiras colunas. c
+(baseada na coluna UF). Também criei as colunas soma_receita, soma_pedidos e soma_clientes, agrupando pelas cinco primeiras colunas. 
+''')
 
 url2 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/cubo_vendas.csv"
 df2 = pd.read_csv(url2, sep=';', encoding='latin1')
