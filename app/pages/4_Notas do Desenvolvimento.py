@@ -84,8 +84,8 @@ st.markdown('''
 - **random_state** = 42: Define a semente do gerador de números aleatórios para garantir a reprodutibilidade dos resultados.
 
 Com essas configurações, o K-means retornou 10 grupos numerados de 0 a 9. Escorei os clusters gerados ao DataFrame principal e 
-decidi novamente gerar alguns agrupamentos no SQL. Importei o arquivo e criei uma query para novas colunas de soma_garrafas,
-soma_receita e count_qtd_clientes.
+decidi novamente gerar alguns agrupamentos no SQL. Escrevi o df em SQL e criei uma query para adicionar novas colunas de soma_garrafas,
+soma_receita e count_qtd_clientes e agrupar pelas 3 primeiras colunas, o que resultou no cubo abaixo:
 ''')
 
 
@@ -97,7 +97,7 @@ st.table(df3)
 
 
 st.markdown('''
-Com esse cubo, pude visualizar novamente, através das tabelas dinâmicas do Excel, os comportamentos que caracterizam os perfis 
+Com esse cubo, pude visualizar novamente, através das tabelas dinâmicas do Excel, pude identificar os comportamentos que caracterizam os perfis 
 de compra de cada cluster definido pelo algoritmo. Esses perfis foram descritos na página **Visão Geral** e as tabelas dinâmicas que 
 me ajudaram a identificar cada perfil podem ser consultadas na página **Visualização Dinâmica Clusters**.
 ''')
