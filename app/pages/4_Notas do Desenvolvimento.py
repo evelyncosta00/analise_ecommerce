@@ -12,7 +12,10 @@ st.markdown(''' # Notas do Desenvolvimento 	:pencil:''')
 
 
 st.divider()
-
+st.markdown('''
+Nesta página, você encontrará uma descrição completa de todo o processo de desenvolvimento do projeto. 
+Desde a importação e análise dos dados até a aplicação de modelos e a geração de insights, cada etapa é 
+explicada para que todos possam entender as técnicas e métodos utilizados. ''')
 
 st.markdown('''
 Primeiramente, importei as duas tabelas no Python para analisar as bases de dados. 
