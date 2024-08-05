@@ -87,3 +87,10 @@ decidi novamente gerar alguns agrupamentos no SQL. Importei o arquivo e criei um
 soma_receita e count_qtd_clientes.
 ''')
 
+
+url3 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/cubo_clientes_clusterizados.csv"
+df3 = pd.read_csv(url3,encoding='latin1')
+
+st.table(df3)
+
+
