@@ -20,6 +20,7 @@ Identifiquei as semelhanças e diferenças entre elas e segui a ordem indicada n
 Decidi explorar primeiro a base de dados Vendas_Evino.xlsx, realizei o tratamento dos nomes das colunas e a análise descritiva inicial.
 ''')
 
+url = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/Vendas_Evino.csv"
+df = pd.read_csv(url)
 
-# Exibir o DataFrame
-st.table("https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/Vendas_Evino.csv")
+st.table(df)
