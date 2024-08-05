@@ -3,6 +3,12 @@ import pandas as pd
 import plotly.express as px
 from utilidades import leitura_de_dados
 
+st.markdown(''' 
+##### Selecione os campos para visualizar a tabela dinâmica             
+''')
+
+st.divider ()
+
 # Definição das colunas de análise e valor para o novo DataFrame
 COLUNAS_ANALISE_NOVO = {
     'Faixa de Preço': 'range_de_preco', 
@@ -129,9 +135,6 @@ if len(indices_selecionados) > 0:
     )
     st.plotly_chart(fig)
     
-st.markdown(''' 
-#### Selecione os campos para visualizar a tabela dinâmica             
-''')
 
 st.divider()
 
