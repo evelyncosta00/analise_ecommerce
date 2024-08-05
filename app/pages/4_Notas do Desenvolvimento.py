@@ -91,7 +91,7 @@ soma_receita e count_qtd_clientes.
 url3 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/cubo_clientes_clusterizados.csv"
 df3 = pd.read_csv(url3, sep=';', encoding='latin1')
 
-df2 = df2.head()
+df3 = df3.head()
 st.table(df3)
 
 
