@@ -45,10 +45,10 @@ url2 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/b
 df2 = pd.read_csv(url2, sep=';', encoding='latin1')
 
 
-df2 = df2.loc[:, ~df.columns.str.contains('^Unnamed')]
+df2 = df2.loc[:, ~df2.columns.str.contains('^Unnamed')]
 
 
 df2 = df2.head()
-st.table(df)
+st.table(df2)
 
 
