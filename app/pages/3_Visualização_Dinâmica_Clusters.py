@@ -3,11 +3,11 @@ import pandas as pd
 import plotly.express as px
 from utilidades import leitura_de_dados
 
-st.markdown(''' 
-##### Selecione os campos para visualizar a tabela dinâmica             
+st.markdown('''
+## Clusters :jigsaw:            
 ''')
 
-st.divider ()
+st.divider()
 
 # Definição das colunas de análise e valor para o novo DataFrame
 COLUNAS_ANALISE_NOVO = {
@@ -135,13 +135,6 @@ if len(indices_selecionados) > 0:
     )
     st.plotly_chart(fig)
     
-
-st.divider()
-
-
-st.markdown('''
-## Clusters :jigsaw:            
-''')
 
 st.divider()
 
