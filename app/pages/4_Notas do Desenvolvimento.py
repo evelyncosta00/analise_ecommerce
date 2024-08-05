@@ -39,7 +39,7 @@ algo crucial no ambiente corporativo onde frequentemente lidamos com dados prove
 
 Criei uma variável engine para armazenar as informações de conexão e usei a função to_sql para escrever o DataFrame. 
 Em uma query SQL, criei as colunas de agrupamento por faixa etária (baseada na coluna idade) e por Região do Brasil 
-(baseada na coluna UF). Também criei as colunas soma_receita, soma_pedidos e soma_clientes, agrupando pelas cinco primeiras colunas. ''')
+(baseada na coluna UF). Também criei as colunas soma_receita, soma_pedidos e soma_clientes, agrupando pelas cinco primeiras colunas. c
 
 url2 = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/cubo_vendas.csv"
 df2 = pd.read_csv(url2, sep=';', encoding='latin1')
@@ -51,4 +51,38 @@ df2 = df2.loc[:, ~df2.columns.str.contains('^Unnamed')]
 df2 = df2.head()
 st.table(df2)
 
+st.markdown('''
+Depois, importei essa query para um DataFrame no Python e gerei um arquivo Excel para visualizar algumas tabelas dinâmicas.
+Com essas tabelas dinâmicas, percebi que teria todos os principais insights de forma clara e simples. Decidi então construir
+um código para gerar tabelas dinâmicas no Python e apresentá-las com a biblioteca de visualização Streamlit. Com as tabelas
+dinâmicas geradas em Python e os gráficos da biblioteca Plotly, consegui visualizar com ainda mais facilidade os principais insights,
+que estão descritos na página de visão geral. Essas tabelas e gráficos podem ser consultados na aba “Visualização Dinâmica Vendas”.
+''')
+
+st.divider()
+
+
+st.markdown('''
+Plotei todos os grandes números, analisei as combinações que faziam sentido e, após isso, decidi partir para a segunda etapa do case:
+#### Desenvolvimento de Modelos Estatísticos de CRM, especificamente a clusterização.
+
+Trouxe a base Vendas_Clientes_Evino.xlsx para o Python, examinei as colunas e o comportamento dos dados, verifiquei valores nulos e
+outros aspectos da análise exploratória. Realizei o tratamento dos nomes das colunas e criei variáveis dummies para as colunas 
+range_de_preco e tipo_de_vinho, transformando esses dados em categóricos para poder rodar o modelo K-means da biblioteca Scikit-learn, 
+que é um algoritmo de clustering não supervisionado que organiza dados em 
+K clusters, onde K é um número definido pelo usuário.
+''')
+
+st.markdown('''
+##### Parâmetros usados na configuração do K-means:
+
+- **n_clusters** = 10: Define o número de clusters (K) que você deseja formar.
+- **max_iter** = 300: Número máximo de iterações do algoritmo K-means para uma única execução.
+- **n_init** = 10: Número de vezes que o K-means será executado com diferentes centroides iniciais.
+- **random_state** = 42: Define a semente do gerador de números aleatórios para garantir a reprodutibilidade dos resultados.
+
+Com essas configurações, o K-means encontrou 10 grupos numerados de 0 a 9. Atribuí os clusters gerados ao DataFrame principal e 
+decidi novamente gerar alguns agrupamentos no SQL. Importei o arquivo e criei uma query para novas colunas de soma_garrafas,
+soma_receita e count_qtd_clientes.
+''')
 
