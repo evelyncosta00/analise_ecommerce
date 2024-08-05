@@ -21,7 +21,7 @@ Decidi explorar primeiro a base de dados Vendas_Evino.xlsx, realizei o tratament
 ''')
 
 url = "https://raw.githubusercontent.com/evelyncosta00/analise_ecommerce/main/bases/Vendas_Evino.csv"
-df = pd.read_csv(url,sep =";",encoding='utf-8')
+df = pd.read_csv(url,sep =";",encoding='latin1')
 df = df.head()
 
 st.table(df)
