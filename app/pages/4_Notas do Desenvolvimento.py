@@ -98,7 +98,7 @@ st.table(df3)
 st.markdown('''
 Com esse cubo, pude visualizar novamente, através das tabelas dinâmicas do Excel, os comportamentos que caracterizam os perfis 
 de compra de cada cluster definido pelo algoritmo. Esses perfis foram descritos na aba “Visão Geral” e as tabelas dinâmicas que 
-me ajudaram a identificar cada perfil podem ser consultadas na aba **Visualização Dinâmica Clusters**”.
+me ajudaram a identificar cada perfil podem ser consultadas na aba **Visualização Dinâmica Clusters**.
 ''')
 
 
