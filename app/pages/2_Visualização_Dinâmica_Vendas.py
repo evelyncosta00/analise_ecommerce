@@ -4,7 +4,7 @@ import plotly.express as px
 from utilidades import leitura_de_dados
 
 st.markdown('''
-## Vendas :jigsaw:            
+## Vendas :label:          
 ''')
 
 st.divider()
