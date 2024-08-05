@@ -26,12 +26,33 @@ FUNCOES_AGG = {
 leitura_de_dados()
 df_vendas = st.session_state['dados']['df_vendas']
 
+# Definir o mapeamento para renomear os valores da coluna
+mapeamento_preco = {
+    "R$0 a R$49,99": "1-R$0 a R$49,99",
+    "R$50 a R$99,99": "2-R$50 a R$99,99",
+    "R$100 a R$199,99": "3-R$100 a R$199,99",
+    "R$200 a R$399,99": "4-R$200 a R$399,99",
+    "R$400 ou mais": "5-R$400 ou mais"
+}
+
+# Aplicar o mapeamento à coluna 'cluster_de_preco_do_vinho'
+df_vendas['cluster_de_preco_do_vinho'] = df_vendas['cluster_de_preco_do_vinho'].replace(mapeamento_preco)
+
+# Definir a ordem desejada para 'cluster_de_preco_do_vinho'
+ordem_preco = list(mapeamento_preco.values())
+
+# Aplicar a categoria ordenada à coluna 'cluster_de_preco_do_vinho'
+df_vendas['cluster_de_preco_do_vinho'] = pd.Categorical(df_vendas['cluster_de_preco_do_vinho'], categories=ordem_preco, ordered=True)
+
+# Inicialização da seleção de índices com 'Tipo do Vinho'
+indices_iniciais = ['Tipo do Vinho']
+
 # Seleção dos índices pelo usuário
-indices_selecionados = st.sidebar.multiselect('Selecione os índices', list(COLUNAS_ANALISE.keys()))
+indices_selecionados = st.sidebar.multiselect('Selecione apenas um índice por análise', list(COLUNAS_ANALISE.keys()), default=indices_iniciais)
 
 # Seleção das colunas pelo usuário
 col_analises_exc = [c for c in list(COLUNAS_ANALISE.keys()) if c not in indices_selecionados]
-colunas_selecionadas = st.sidebar.multiselect('Selecione as colunas', col_analises_exc)
+colunas_selecionadas = st.sidebar.multiselect('Selecione apenas uma coluna por análise', col_analises_exc)
 
 # Seleção da coluna de valor pelo usuário
 valor_selecionado = st.sidebar.selectbox('Selecione o valor de análise:', list(COLUNAS_VALOR.keys()))
@@ -101,6 +122,7 @@ if len(indices_selecionados) > 0:
             'Categoria': 'Categoria',
             'Valor': valor_selecionado,
             color_column: color_column_name
-        }
+        },
+        category_orders={'Categoria': ordem_preco}  # Definir a ordem das categorias
     )
     st.plotly_chart(fig)
