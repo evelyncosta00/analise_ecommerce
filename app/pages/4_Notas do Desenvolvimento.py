@@ -107,6 +107,6 @@ st.divider()
 
 st.markdown('''
 Com este case, pude demonstrar algumas das minhas habilidades técnicas e analíticas. Espero ter mais desafios para criar cada vez mais 
-soluções inteligentes. :bar_chart:
+soluções inteligentes baseadas em dados. :bar_chart:
 ''')
 
